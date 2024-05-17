@@ -14,11 +14,11 @@ namespace InFormationOfResturant.Models
     
     public partial class Restaurant
     {
-        public int Restaurant_Id { get; set; }
-        public string Restaurant_Name { get; set; }
-        public string Restaurant_Address { get; set; }
-        public string Cuisine_Type { get; set; }
-        public string Contact_Number { get; set; }
-        public string Operating_Hours { get; set; }
+        public int RestaurantId { get; set; }
+        public string RestaurantName { get; set; }
+        public string RestaurantAddress { get; set; }
+        public string CuisineType { get; set; }
+        public string ContactNumber { get; set; }
+        public string OperatingHours { get; set; }
     }
 }
