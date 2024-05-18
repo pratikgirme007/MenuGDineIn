@@ -1,0 +1,76 @@
+﻿@model UserLogin.Models.DAL.UserDetail
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>UserDetails</h4>
+        <hr />
+
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.FirstName)
+            <div class="">
+                @Html.EditorFor(x => x.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.MiddleName)
+            <div class="">
+                @Html.EditorFor(x => x.MiddleName)
+                @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.LastName)
+            <div class="">
+                @Html.EditorFor(x => x.LastName)
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Email)
+            <div class="">
+                @Html.EditorFor(x => x.Email)
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.MobileNumber)
+            <div class="">
+                @Html.EditorFor(x => x.MobileNumber)
+                @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.UserID)
+            <div class="">
+                @Html.EditorFor(x => x.UserID)
+                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Password)
+            <div class="">
+                @Html.EditorFor(x => x.Password)
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="submit" />
+            </div>
+        </div>
+    </div>
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")

@@ -7,17 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UserLogin.Models
+namespace UserLogin.Models.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class UserLogin
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class UserLoginDto
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "Please enter UserId")]
         public string userid { get; set; }
+        [Required(ErrorMessage = "Please enter Password")]
+        [DataType(DataType.Password)]
         public string password { get; set; }
         public Nullable<System.DateTime> createddate { get; set; }
         public Nullable<System.DateTime> modifieddate { get; set; }
+        public Nullable<short> IsActive { get; set; }
     }
 }

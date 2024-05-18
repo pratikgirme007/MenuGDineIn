@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UserLogin.Models
+namespace UserLogin.Models.DAL
 {
     using System;
     using System.Data.Entity;
@@ -25,6 +25,7 @@ namespace UserLogin.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserLogin> UserLogins { get; set; }
+        public virtual DbSet<UserLoginDto> UserLoginDtoes { get; set; }
+        public virtual DbSet<UserDetail> UserDetails { get; set; }
     }
 }
