@@ -1,13 +1,13 @@
-﻿@model RestaurantRwgistration.Models.Restaurant
+﻿@model RestaurantRegistration.Models.Restaurant
 
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2 style="color: rebeccapurple; text-align: center">Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
-<div>
+<div class="Delete">
     <h4>Restaurant</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -53,7 +53,8 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
@@ -61,4 +62,14 @@
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
+
+
+    <style>
+        .Delete {
+            margin-left: 500px;
+            margin-right: 100Px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
 </div>

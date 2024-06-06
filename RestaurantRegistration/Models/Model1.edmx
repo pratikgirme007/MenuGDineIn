@@ -4,38 +4,38 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Sql1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SqlDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Restaurant">
           <Key>
             <PropertyRef Name="ResturantID" />
           </Key>
           <Property Name="ResturantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ResturantName" Type="varchar" MaxLength="100" />
-          <Property Name="RestaurantAddress" Type="varchar" MaxLength="100" />
-          <Property Name="CuisineType" Type="varchar" MaxLength="100" />
-          <Property Name="ContactNumber" Type="varchar" MaxLength="100" />
-          <Property Name="OperatingHours" Type="varchar" MaxLength="50" />
+          <Property Name="ResturantName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="RestaurantAddress" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CuisineType" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ContactNumber" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="OperatingHours" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="Sql1ModelStoreContainer">
+        <EntityContainer Name="SqlDemoModelStoreContainer">
           <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Sql1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="SqlDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Restaurant">
           <Key>
             <PropertyRef Name="ResturantID" />
           </Key>
           <Property Name="ResturantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ResturantName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="RestaurantAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CuisineType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ContactNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="OperatingHours" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ResturantName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RestaurantAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CuisineType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContactNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OperatingHours" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="Sql1DbContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SqlDemoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Restaurants" EntityType="Self.Restaurant" />
         </EntityContainer>
       </Schema>
@@ -43,9 +43,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Sql1ModelStoreContainer" CdmEntityContainer="Sql1DbContext">
+        <EntityContainerMapping StorageEntityContainer="SqlDemoModelStoreContainer" CdmEntityContainer="SqlDemoEntities">
           <EntitySetMapping Name="Restaurants">
-            <EntityTypeMapping TypeName="Sql1Model.Restaurant">
+            <EntityTypeMapping TypeName="SqlDemoModel.Restaurant">
               <MappingFragment StoreEntitySet="Restaurant">
                 <ScalarProperty Name="ResturantID" ColumnName="ResturantID" />
                 <ScalarProperty Name="ResturantName" ColumnName="ResturantName" />

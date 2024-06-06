@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Sql1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="SqlDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Restaurant">
     <Key>
       <PropertyRef Name="ResturantID" />
     </Key>
     <Property Name="ResturantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ResturantName" Type="varchar" MaxLength="100" />
-    <Property Name="RestaurantAddress" Type="varchar" MaxLength="100" />
-    <Property Name="CuisineType" Type="varchar" MaxLength="100" />
-    <Property Name="ContactNumber" Type="varchar" MaxLength="100" />
-    <Property Name="OperatingHours" Type="varchar" MaxLength="50" />
+    <Property Name="ResturantName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RestaurantAddress" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CuisineType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="OperatingHours" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="Sql1ModelStoreContainer">
+  <EntityContainer Name="SqlDemoModelStoreContainer">
     <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

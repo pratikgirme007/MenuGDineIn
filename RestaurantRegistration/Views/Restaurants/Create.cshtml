@@ -1,10 +1,10 @@
-﻿@model RestaurantRwgistration.Models.Restaurant
+﻿@model RestaurantRegistration.Models.Restaurant
 
 @{
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2 style="color: rebeccapurple; text-align: center">Rigester</h2>
 
 
 @using (Html.BeginForm()) 
@@ -57,16 +57,26 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Submit" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
+<div style="margin-left: 500px; margin-right: 100Px; margin-top: 10px; margin-bottom: 20px;">
     @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
 }
+
+<style>
+    .form-horizontal {
+        margin-left: 500px;
+        margin-right: 100Px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+</style>

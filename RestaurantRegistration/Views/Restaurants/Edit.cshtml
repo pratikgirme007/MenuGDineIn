@@ -1,10 +1,10 @@
-﻿@model RestaurantRwgistration.Models.Restaurant
+﻿@model RestaurantRegistration.Models.Restaurant
 
 @{
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 style="color: rebeccapurple; text-align: center">Edit</h2>
 
 
 @using (Html.BeginForm())
@@ -65,10 +65,25 @@
     </div>
 }
 
-<div>
+<div class="Action">
     @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<style>
+    .form-horizontal {
+        margin-left: 500px;
+        margin-right: 100Px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .Action {
+        margin-left: 500px;
+        margin-right: 100Px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+</style>

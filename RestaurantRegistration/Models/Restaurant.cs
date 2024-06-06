@@ -7,18 +7,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RestaurantRwgistration.Models
+namespace RestaurantRegistration.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Restaurant
     {
+        [Required(ErrorMessage = "Enter Valid Resturant ID")]
+        [Display(Name = "Restaurant ID")]
         public int ResturantID { get; set; }
+        [Required(ErrorMessage = " Resturant Name Is Required")]
+        [Display(Name = "Restaurant Name")]
         public string ResturantName { get; set; }
+        [Required(ErrorMessage = " Resturant Address Is Required")]
+        [Display(Name = "Restaurant Address")]
         public string RestaurantAddress { get; set; }
+        [Required(ErrorMessage = "Cuisine type is required")]
+        [Display(Name = "Cuisine type")]
         public string CuisineType { get; set; }
+        [Required(ErrorMessage = "Contact number is required")]
+        [RegularExpression(@"^\+?[1-9]\d{1,14}$", ErrorMessage = "Invalid contact number")]
+        [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
+        [Required(ErrorMessage = "Operating Hours Must Be Mentioned")]
+        [DataType(DataType.Time, ErrorMessage = "Invalid Time Format")]
+        [Display(Name = "Operating Hours")]
         public string OperatingHours { get; set; }
     }
 }

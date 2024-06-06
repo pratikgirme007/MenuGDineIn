@@ -7,22 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RestaurantRwgistration.Models
+namespace RestaurantRegistration.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Sql1DbContext : DbContext
+    public partial class SqlDemoEntities : DbContext
     {
-        public Sql1DbContext()
-            : base("name=Sql1DbContext")
+        public SqlDemoEntities()
+            : base("name=SqlDemoEntities")
         {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<Restaurant> Restaurants { get; set; }

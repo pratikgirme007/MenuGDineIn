@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace RestaurantRwgistration
+namespace RestaurantRegistration
 {
     public class FilterConfig
     {

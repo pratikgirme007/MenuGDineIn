@@ -1,12 +1,12 @@
-﻿@model RestaurantRwgistration.Models.Restaurant
+﻿@model RestaurantRegistration.Models.Restaurant
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2 style="color: rebeccapurple; text-align: center">Details</h2>
 
-<div>
+<div class="Details">
     <h4>Restaurant</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -52,7 +52,24 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ResturantID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="Action">
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ResturantID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+<style>
+    .Details {
+        margin-left: 500px;
+        margin-right: 100Px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .Action {
+        margin-left: 500px;
+        margin-right: 100Px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+</style>

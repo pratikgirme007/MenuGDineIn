@@ -6,13 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using RestaurantRwgistration.Models;
+using RestaurantRegistration.Models;
 
-namespace RestaurantRwgistration.Controllers
+namespace RestaurantRegistration.Controllers
 {
     public class RestaurantsController : Controller
     {
-        private Sql1DbContext db = new Sql1DbContext();
+        private SqlDemoEntities db = new SqlDemoEntities();
 
         // GET: Restaurants
         public ActionResult Index()
